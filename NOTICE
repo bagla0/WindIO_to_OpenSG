@@ -1,0 +1,30 @@
+WindIO_to_OpenSG -- third-party components and licenses
+========================================================
+
+This repository's own source code (windio_to_opensg/, scripts/, examples/, docs/)
+is licensed under the MIT License (see LICENSE).
+
+It bundles / references the following third-party tools, which are NOT MIT and
+retain their own licenses:
+
+1. PreVABS  (https://github.com/wenbinyugroup/prevabs)
+   - License: GNU General Public License v2 (GPL-2.0).
+   - Included as a git submodule at third_party/prevabs (source), and its release
+     binary is fetched by scripts/fetch_prevabs.py.
+   - Copyright (c) the PreVABS authors, Wenbin Yu's group (Purdue University).
+   - WindIO_to_OpenSG invokes prevabs.exe as a separate subprocess; under the GPL
+     this is "mere aggregation," so the converter code remains MIT while PreVABS
+     remains GPL-2.0. Corresponding PreVABS source is available at the URL above
+     and via the third_party/prevabs submodule.
+
+2. gmsh  (https://gmsh.info)
+   - License: GNU General Public License v2 (GPL-2.0) with exceptions.
+   - Distributed inside the PreVABS release binary (gmsh-*.dll). Copyright (c)
+     Christophe Geuzaine and Jean-Francois Remacle. Source: https://gmsh.info/src/.
+
+3. windIO  (https://github.com/IEAWindSystems/windIO)
+   - The IEA Wind Task 37 ontology and the IEA-22-280-RWT example data; see that
+     project for its license. Installed via `pip install windIO`, not vendored here.
+
+If you redistribute the PreVABS / gmsh binaries, you must comply with GPL-2.0
+(include the license text and provide or offer the corresponding source).

@@ -1,0 +1,70 @@
+<materials>
+  <material name="gelcoat" type="isotropic">
+    <density>1235</density>
+    <elastic>
+      <e>3.44e+09</e><nu>0.3</nu>
+    </elastic>
+  </material>
+  <material name="glass_triax" type="orthotropic">
+    <density>1940</density>
+    <elastic>
+      <e1>2.82114e+10</e1><e2>1.62388e+10</e2><e3>1.58355e+10</e3>
+      <g12>8.24822e+09</g12><g13>3.49124e+09</g13><g23>3.49124e+09</g23>
+      <nu12>0.497511</nu12><nu13>0.18091</nu13><nu23>0.27481</nu23>
+    </elastic>
+  </material>
+  <material name="glass_uniax" type="orthotropic">
+    <density>1940</density>
+    <elastic>
+      <e1>4.37e+10</e1><e2>1.65e+10</e2><e3>1.545e+10</e3>
+      <g12>3.265e+09</g12><g13>3.495e+09</g13><g23>3.48e+09</g23>
+      <nu12>0.262</nu12><nu13>0.264</nu13><nu23>0.35</nu23>
+    </elastic>
+  </material>
+  <material name="medium_density_foam" type="isotropic">
+    <density>130</density>
+    <elastic>
+      <e>1.425e+08</e><nu>0.3194</nu>
+    </elastic>
+  </material>
+  <material name="carbon_uniax" type="orthotropic">
+    <density>1600</density>
+    <elastic>
+      <e1>1.4e+11</e1><e2>9.1e+09</e2><e3>9.1e+09</e3>
+      <g12>4.131e+09</g12><g13>4.131e+09</g13><g23>2.689e+09</g23>
+      <nu12>0.3133</nu12><nu13>0.3133</nu13><nu23>0.47066</nu23>
+    </elastic>
+  </material>
+  <material name="glass_biax" type="orthotropic">
+    <density>1940</density>
+    <elastic>
+      <e1>1.10231e+10</e1><e2>1.10231e+10</e2><e3>1.60477e+10</e3>
+      <g12>1.32314e+10</g12><g13>3.48748e+09</g13><g23>3.48748e+09</g23>
+      <nu12>0.688074</nu12><nu13>0.117173</nu13><nu23>0.117173</nu23>
+    </elastic>
+  </material>
+  <lamina name="la_gelcoat">
+    <material>gelcoat</material>
+    <thickness>0.0005</thickness>
+  </lamina>
+  <lamina name="la_glass_triax">
+    <material>glass_triax</material>
+    <thickness>0.001</thickness>
+  </lamina>
+  <lamina name="la_glass_uniax">
+    <material>glass_uniax</material>
+    <thickness>0.005</thickness>
+  </lamina>
+  <lamina name="la_medium_density_foam">
+    <material>medium_density_foam</material>
+    <thickness>0.001</thickness>
+  </lamina>
+  <lamina name="la_carbon_uniax">
+    <material>carbon_uniax</material>
+    <thickness>0.005</thickness>
+  </lamina>
+  <lamina name="la_glass_biax">
+    <material>glass_biax</material>
+    <thickness>0.001</thickness>
+  </lamina>
+</materials>

@@ -1,0 +1,160 @@
+<cross_section name="iea22_r050">
+  <include><material>materials</material></include>
+  <analysis><model>1</model></analysis>
+  <general>
+    <scale>4.860706</scale>
+    <mesh_size>0.01</mesh_size>
+    <element_type>linear</element_type>
+  </general>
+  <baselines>
+    <line name="ln_af" type="airfoil"><points data="file" format="1" header="1">iea22_r050.dat</points></line>
+    <point name="d0" on="ln_af" by="x2" which="top">0.833752</point>
+    <point name="d1" on="ln_af" by="x2" which="top">0.699068</point>
+    <point name="d2" on="ln_af" by="x2" which="top">0.342435</point>
+    <point name="d3" on="ln_af" by="x2" which="top">0.322110</point>
+    <point name="d4" on="ln_af" by="x2" which="top">0.158380</point>
+    <point name="d5" on="ln_af" by="x2" which="top">0.139956</point>
+    <point name="d6" on="ln_af" by="x2" which="top">0.025892</point>
+    <point name="d7" on="ln_af" by="x2" which="bottom">0.029187</point>
+    <point name="d8" on="ln_af" by="x2" which="bottom">0.143066</point>
+    <point name="d9" on="ln_af" by="x2" which="bottom">0.153476</point>
+    <point name="d10" on="ln_af" by="x2" which="bottom">0.316563</point>
+    <point name="d11" on="ln_af" by="x2" which="bottom">0.345063</point>
+    <point name="d12" on="ln_af" by="x2" which="bottom">0.696955</point>
+    <point name="d13" on="ln_af" by="x2" which="bottom">0.830320</point>
+    <line name="bl_0"><points>d0:d1</points></line>
+    <line name="bl_1"><points>d1:d2</points></line>
+    <line name="bl_2"><points>d2:d3</points></line>
+    <line name="bl_3"><points>d3:d4</points></line>
+    <line name="bl_4"><points>d4:d5</points></line>
+    <line name="bl_5"><points>d5:d6</points></line>
+    <line name="bl_6"><points>d6:d7</points></line>
+    <line name="bl_7"><points>d7:d8</points></line>
+    <line name="bl_8"><points>d8:d9</points></line>
+    <line name="bl_9"><points>d9:d10</points></line>
+    <line name="bl_10"><points>d10:d11</points></line>
+    <line name="bl_11"><points>d11:d12</points></line>
+    <line name="bl_12"><points>d12:d13</points></line>
+    <line name="bl_te"><points>d13:d0</points></line>
+    <point name="wp_0">0.699068  0</point>
+    <line name="bl_web_0"><point>wp_0</point><angle>90</angle></line>
+    <point name="wp_1">0.158379  0</point>
+    <line name="bl_web_1"><point>wp_1</point><angle>90</angle></line>
+    <point name="wp_2">0.322110  0</point>
+    <line name="bl_web_2"><point>wp_2</point><angle>90</angle></line>
+  </baselines>
+  <layups>
+    <layup name="layup_0">
+      <layer lamina="la_gelcoat">0:1</layer>
+      <layer lamina="la_glass_triax">0:3</layer>
+      <layer lamina="la_glass_uniax">0:3</layer>
+      <layer lamina="la_glass_triax">0:3</layer>
+    </layup>
+    <layup name="layup_1">
+      <layer lamina="la_gelcoat">0:1</layer>
+      <layer lamina="la_glass_triax">0:3</layer>
+      <layer lamina="la_medium_density_foam">0:42</layer>
+      <layer lamina="la_glass_triax">0:3</layer>
+    </layup>
+    <layup name="layup_2">
+      <layer lamina="la_gelcoat">0:1</layer>
+      <layer lamina="la_glass_triax">0:3</layer>
+      <layer lamina="la_carbon_uniax">0:13</layer>
+      <layer lamina="la_glass_triax">0:3</layer>
+    </layup>
+    <layup name="layup_3">
+      <layer lamina="la_gelcoat">0:1</layer>
+      <layer lamina="la_glass_triax">0:3</layer>
+      <layer lamina="la_glass_uniax">0:2</layer>
+      <layer lamina="la_glass_triax">0:3</layer>
+    </layup>
+    <layup name="layup_4">
+      <layer lamina="la_gelcoat">0:1</layer>
+      <layer lamina="la_glass_triax">0:3</layer>
+      <layer lamina="la_carbon_uniax">0:13</layer>
+      <layer lamina="la_glass_triax">0:3</layer>
+    </layup>
+    <layup name="layup_5">
+      <layer lamina="la_glass_biax">0:2</layer>
+      <layer lamina="la_medium_density_foam">0:30</layer>
+      <layer lamina="la_glass_biax">0:2</layer>
+    </layup>
+  </layups>
+  <component name="surface">
+    <segment name="sg_0">
+      <baseline>bl_0</baseline>
+      <layup>layup_1</layup>
+    </segment>
+    <segment name="sg_1">
+      <baseline>bl_1</baseline>
+      <layup>layup_1</layup>
+    </segment>
+    <segment name="sg_2">
+      <baseline>bl_2</baseline>
+      <layup>layup_2</layup>
+    </segment>
+    <segment name="sg_3">
+      <baseline>bl_3</baseline>
+      <layup>layup_2</layup>
+    </segment>
+    <segment name="sg_4">
+      <baseline>bl_4</baseline>
+      <layup>layup_2</layup>
+    </segment>
+    <segment name="sg_5">
+      <baseline>bl_5</baseline>
+      <layup>layup_1</layup>
+    </segment>
+    <segment name="sg_6">
+      <baseline>bl_6</baseline>
+      <layup>layup_3</layup>
+    </segment>
+    <segment name="sg_7">
+      <baseline>bl_7</baseline>
+      <layup>layup_1</layup>
+    </segment>
+    <segment name="sg_8">
+      <baseline>bl_8</baseline>
+      <layup>layup_4</layup>
+    </segment>
+    <segment name="sg_9">
+      <baseline>bl_9</baseline>
+      <layup>layup_4</layup>
+    </segment>
+    <segment name="sg_10">
+      <baseline>bl_10</baseline>
+      <layup>layup_4</layup>
+    </segment>
+    <segment name="sg_11">
+      <baseline>bl_11</baseline>
+      <layup>layup_1</layup>
+    </segment>
+    <segment name="sg_12">
+      <baseline>bl_12</baseline>
+      <layup>layup_1</layup>
+    </segment>
+    <segment name="sg_te">
+      <baseline>bl_te</baseline>
+      <layup>layup_0</layup>
+    </segment>
+  </component>
+  <component name="web_0" depend="surface">
+    <segment name="sg_web_0">
+      <baseline>bl_web_0</baseline>
+      <layup>layup_5</layup>
+    </segment>
+  </component>
+  <component name="web_1" depend="surface">
+    <segment name="sg_web_1">
+      <baseline>bl_web_1</baseline>
+      <layup>layup_5</layup>
+    </segment>
+  </component>
+  <component name="web_2" depend="surface">
+    <segment name="sg_web_2">
+      <baseline>bl_web_2</baseline>
+      <layup>layup_5</layup>
+    </segment>
+  </component>
+  <global><loads>1 2 3 4 5 6</loads></global>
+</cross_section>

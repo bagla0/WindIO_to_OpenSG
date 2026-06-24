@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.ipynb_checkpoints/
+# fetched PreVABS binary (large, GPL -- fetched by scripts/fetch_prevabs.py, not committed)
+third_party/prevabs_bin/
+# generated meshes / large artifacts
+out/
+*.sg
+*.sg.mat
+*.vabs
+# keep the curated benchmark examples under examples/ (do NOT ignore those)
+!examples/**
