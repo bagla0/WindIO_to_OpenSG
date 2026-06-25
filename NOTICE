@@ -26,5 +26,15 @@ retain their own licenses:
    - The IEA Wind Task 37 ontology and the IEA-22-280-RWT example data; see that
      project for its license. Installed via `pip install windIO`, not vendored here.
 
+4. OpenFAST  (https://github.com/OpenFAST/openfast)
+   - License: Apache License 2.0.
+   - Included as a git submodule at third_party/openfast (source); its release
+     binary is fetched by scripts/fetch_openfast.py (only needed to RUN OpenFAST).
+   - Copyright (c) National Renewable Energy Laboratory (NREL).
+   - WindIO_to_OpenSG reads OpenFAST ElastoDyn/BeamDyn blade text files as a
+     validation reference and writes BeamDyn blade files from the homogenised 6x6
+     (windio_to_opensg/openfast_io.py). No OpenFAST code is linked into this project.
+
 If you redistribute the PreVABS / gmsh binaries, you must comply with GPL-2.0
-(include the license text and provide or offer the corresponding source).
+(include the license text and provide or offer the corresponding source). OpenFAST
+is Apache-2.0; retain its LICENSE and NOTICE if you redistribute its binaries.

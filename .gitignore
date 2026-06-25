@@ -4,6 +4,8 @@ __pycache__/
 .ipynb_checkpoints/
 # fetched PreVABS binary (large, GPL -- fetched by scripts/fetch_prevabs.py, not committed)
 third_party/prevabs_bin/
+# fetched OpenFAST binary (large -- fetched by scripts/fetch_openfast.py, not committed)
+third_party/openfast_bin/
 # generated meshes / large artifacts
 out/
 *.sg

@@ -1,3 +1,6 @@
 [submodule "third_party/prevabs"]
 	path = third_party/prevabs
 	url = https://github.com/wenbinyugroup/prevabs
+[submodule "third_party/openfast"]
+	path = third_party/openfast
+	url = https://github.com/OpenFAST/openfast
