@@ -33,7 +33,7 @@ def main():
     api = "https://api.github.com/repos/%s/releases" % REPO
     print("querying", api)
     req = urllib.request.Request(api, headers={"Accept": "application/vnd.github+json",
-                                               "User-Agent": "WindIO_to_OpenSG"})
+                                               "User-Agent": "opensg_io"})
     rels = json.load(urllib.request.urlopen(req))
     if not rels:
         sys.exit("no releases found at %s -- download PreVABS manually and place prevabs(.exe) in %s" % (REPO, DEST))
@@ -45,7 +45,7 @@ def main():
                 url = asset["browser_download_url"]
                 print("downloading %s (%s, %.1f MB)" % (asset["name"], rel["tag_name"], asset["size"] / 1e6))
                 data = urllib.request.urlopen(urllib.request.Request(
-                    url, headers={"User-Agent": "WindIO_to_OpenSG"})).read()
+                    url, headers={"User-Agent": "opensg_io"})).read()
                 if nm.endswith(".zip"):
                     zipfile.ZipFile(io.BytesIO(data)).extractall(DEST)
                 else:

@@ -490,9 +490,9 @@ def emit_prevabs(cs, outdir, name="xsec", mesh_size=0.005):
 
 
 if __name__ == "__main__":
-    # single-station demo for ANY windIO file:  python windio_to_opensg.py <blade.yaml> [r] [mesh_size] [out.yaml]
+    # single-station demo for ANY windIO file:  python opensg_io.py <blade.yaml> [r] [mesh_size] [out.yaml]
     if len(sys.argv) < 2:
-        sys.exit("usage: python windio_to_opensg.py <windio_blade.yaml> [r=0.5] [mesh_size=0.01] [out.yaml]")
+        sys.exit("usage: python opensg_io.py <windio_blade.yaml> [r=0.5] [mesh_size=0.01] [out.yaml]")
     src = sys.argv[1]
     r = float(sys.argv[2]) if len(sys.argv) > 2 else 0.5
     ms = float(sys.argv[3]) if len(sys.argv) > 3 else 0.01

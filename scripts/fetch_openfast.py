@@ -1,6 +1,6 @@
 """Download the OpenFAST (Apache-2.0) release binary for the current OS into third_party/openfast_bin/.
 
-OpenFAST is the third-party aeroelastic tool this project bridges (see windio_to_opensg/openfast_io.py):
+OpenFAST is the third-party aeroelastic tool this project bridges (see opensg_io/openfast_io.py):
 read its ElastoDyn/BeamDyn blade data as a validation reference, and write BeamDyn blade files from the
 OpenSG-homogenised 6x6 to DRIVE an OpenFAST run. The binary is only needed if you actually run OpenFAST;
 reading/writing the blade text files needs no binary. Source: github.com/OpenFAST/openfast (Apache-2.0).
@@ -35,7 +35,7 @@ def main():
     api = "https://api.github.com/repos/%s/releases" % REPO
     print("querying", api)
     req = urllib.request.Request(api, headers={"Accept": "application/vnd.github+json",
-                                               "User-Agent": "WindIO_to_OpenSG"})
+                                               "User-Agent": "opensg_io"})
     rels = json.load(urllib.request.urlopen(req))
     if not rels:
         sys.exit("no releases found at %s -- install OpenFAST manually into %s" % (REPO, DEST))
@@ -47,7 +47,7 @@ def main():
                 url = asset["browser_download_url"]
                 print("downloading %s (%s, %.1f MB)" % (asset["name"], rel["tag_name"], asset["size"] / 1e6))
                 data = urllib.request.urlopen(urllib.request.Request(
-                    url, headers={"User-Agent": "WindIO_to_OpenSG"})).read()
+                    url, headers={"User-Agent": "opensg_io"})).read()
                 if nm.endswith(".zip"):
                     zipfile.ZipFile(io.BytesIO(data)).extractall(DEST)
                 elif nm.endswith((".tar.gz", ".tgz")):

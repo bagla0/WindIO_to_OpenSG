@@ -4,7 +4,7 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 import windIO
-from windio_to_opensg import WindIOBlade, build_cross_section, emit_opensg_yaml, emit_prevabs
+from opensg_io import WindIOBlade, build_cross_section, emit_opensg_yaml, emit_prevabs
 
 src = os.path.join(os.path.dirname(windIO.__file__), "examples", "turbine", "IEA-22-280-RWT.yaml")
 out = os.path.join(os.path.dirname(__file__), "..", "out", "iea22_sweep")

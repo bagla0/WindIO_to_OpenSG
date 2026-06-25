@@ -9,7 +9,7 @@ import os, sys, glob, argparse, subprocess, platform
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 sys.path.insert(0, REPO)
-from windio_to_opensg import load_blade, build_cross_section, emit_opensg_yaml, emit_prevabs
+from opensg_io import load_blade, build_cross_section, emit_opensg_yaml, emit_prevabs
 
 
 def find_prevabs():
