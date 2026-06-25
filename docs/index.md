@@ -135,4 +135,5 @@ tutorials/openfast
 :caption: Reference
 
 api
+pipeline
 ```
